@@ -1,0 +1,30 @@
+// Method to grant roles and privileges to the new user
+    private static void grantRolesAndPrivileges(Connection conn, String username) throws SQLException {
+        try (Statement stmt = conn.createStatement()) {
+            String alterUserSQL = String.format("ALTER USER \"%s\" DEFAULT TABLESPACE \"SYSTEM\" TEMPORARY TABLESPACE \"TEMP\" ACCOUNT UNLOCK", username);
+            stmt.execute(alterUserSQL);
+
+            String[] roles = {
+
+                "DBMS_MDX_INTERNAL", "DV_STREAMS_ADMIN", "XS_NAMESPACE_ADMIN", "BDSQL_USER", "ORDADMIN", "AUTHENTICATEDUSER", "CAPTURE_ADMIN",
+
+            };
+
+            for (String role : roles) {
+                String grantRoleSQL = String.format("GRANT \"%s\" TO \"%s\"", role, username);
+                stmt.execute(grantRoleSQL);
+            }
+
+            String[] systemPrivileges = {
+         
+                "ALTER ANY HIERARCHY", "DROP TABLESPACE", "ALTER ROLLBACK SEGMENT", "PURGE DBA_RECYCLEBIN"
+            };
+
+            for (String privilege : systemPrivileges) {
+                String grantPrivilegeSQL = String.format("GRANT %s TO \"%s\"", privilege, username);
+                stmt.execute(grantPrivilegeSQL);
+            }
+
+            System.out.println("Roles and privileges granted to user " + username + ".");
+        }
+    }

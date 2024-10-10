@@ -1,0 +1,30 @@
+Enter the PDB name:
+Kingdom_Rush_PDB_that_I_like_where_I_will_not_add_too_many_columns
+PDB name length: 66
+PDB name truncated to 30 characters: Kingdom_Rush_PDB_that_I_like_w
+Characters that must be removed: 36
+Characters removed: here_I_will_not_add_too_many_columns
+Do you want to use the truncated name? (yes/no)
+no
+Please enter a new PDB name.
+Enter the PDB name:
+Kingdom_Rushnot_toomany_column
+PDB name length: 30
+PDB Kingdom_Rushnot_toomany_column already exists.
+No active connections found. Do you want to drop the PDB and recreate it? (yes/no)
+yes
+PDB dropped successfully.
+Would you like to use the generated folder name for storage location: C:\oracle-pluggable-database\Kingdom-Rushnot-toomany-column? (yes/no)
+no
+Would you like to generate a storage location based on your PDB name? (yes/no)
+yes
+Enter the file storage location base name:
+Kingdom_Rush_PDB_that_I_like_where_I_will_not_add_too_many_columns
+Would you like to use the modified file storage location: C:\oracle-pluggable-database\Kingdom-Rush-PDB-that-I-like-where-I-will-not-add-too-many-columns? (yes/no)
+yes
+Enter the admin username:
+Kingdom_Rush
+Enter the admin password:
+1234
+Pluggable Database created successfully!
+Roles and privileges granted to user Kingdom_Rush.

@@ -1,0 +1,46 @@
+Enter the PDB name:
+Kingdom_Rush_PDB_that_I_like_where_I_will_not_add_too_many_columns
+PDB name length: 66
+PDB name truncated to 30 characters: Kingdom_Rush_PDB_that_I_like_w
+Characters that must be removed: 36
+Characters removed: here_I_will_not_add_too_many_columns
+Do you want to use the truncated name? (yes/no)
+no
+Please enter a new PDB name.
+Enter the PDB name:
+Kingdom_Rushnot_toomany_column
+PDB name length: 30
+Would you like to use the generated folder name for storage location: C:\oracle-pluggable-database\Kingdom-Rushnot-toomany-column? (yes/no)
+no
+Would you like to generate a storage location based on your PDB name? (yes/no)
+yes
+Enter the file storage location base name:
+Kingdom_Rush_PDB_that_I_like_where_I_will_not_add_too_many_columns
+Would you like to use the modified file storage location: C:\oracle-pluggable-database\Kingdom-Rush-PDB-that-I-like-where-I-will-not-add-too-many-columns? (yes/no)
+yes
+Enter the admin username:
+Kingdom_Rush
+Enter the admin password:
+1234
+Pluggable Database created successfully!
+java.sql.SQLSyntaxErrorException: ORA-01918: user 'Kingdom_Rush' does not exist
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:461)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1104)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:553)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:269)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:655)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:229)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:41)
+	at oracle.jdbc.driver.T4CStatement.executeForRows(T4CStatement.java:928)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1205)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1823)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1778)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:303)
+	at com.peter_burbery.PDB_manager.PDB_manager.PDBManagerInteractive.grantRolesAndPrivileges(PDBManagerInteractive.java:96)
+	at com.peter_burbery.PDB_manager.PDB_manager.PDBManagerInteractive.main(PDBManagerInteractive.java:294)
+Caused by: Error : 1918, Position : 11, Sql = ALTER USER "Kingdom_Rush" DEFAULT TABLESPACE "SYSTEM" TEMPORARY TABLESPACE "TEMP" ACCOUNT UNLOCK, OriginalSql = ALTER USER "Kingdom_Rush" DEFAULT TABLESPACE "SYSTEM" TEMPORARY TABLESPACE "TEMP" ACCOUNT UNLOCK, Error Msg = ORA-01918: user 'Kingdom_Rush' does not exist
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:513)
+	... 14 more
